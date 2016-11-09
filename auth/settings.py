@@ -26,6 +26,10 @@ SECRET_KEY = '&84kgco4zqx-$zs1q+z)9ci54c$9^_125-hc$p93xj7q5eg8v&'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# paypal settings
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'johnnyrandallxx-facilitator@gmail.com'
 
 
 # Application definition
@@ -38,8 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
+    'paypal.standard.ipn',
     'hello',
-    'accounts'
+    'accounts',
+    'paypal_store',
+    'products'
 ]
 
 MIDDLEWARE = [
