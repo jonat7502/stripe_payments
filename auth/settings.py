@@ -26,10 +26,7 @@ SECRET_KEY = '&84kgco4zqx-$zs1q+z)9ci54c$9^_125-hc$p93xj7q5eg8v&'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-# paypal settings
-SITE_URL = 'http://127.0.0.1:8000'
-PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
-PAYPAL_RECEIVER_EMAIL = 'johnnyrandallxx-facilitator@gmail.com'
+
 
 
 # Application definition
@@ -46,7 +43,8 @@ INSTALLED_APPS = [
     'hello',
     'accounts',
     'paypal_store',
-    'products'
+    'products',
+    'magazines',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +142,7 @@ AUTHENTICATION_BACKENDS = (
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'publishable key')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'secret key')
+# paypal settings
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://f70f9d61.ngrok.io/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'johnnyrandallxx-facilitator@gmail.com'
